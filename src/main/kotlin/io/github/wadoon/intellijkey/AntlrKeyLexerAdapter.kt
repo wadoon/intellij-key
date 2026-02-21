@@ -1,14 +1,14 @@
-package com.github.wadoon.intellijkey
+package io.github.wadoon.intellijkey
 
-import com.github.wadoon.key.KeYLexer
-import com.github.wadoon.key.KeYLexer.*
+import io.github.wadoon.intellijkey.KeYLexer.*
 import com.intellij.lexer.LexerBase
+import com.intellij.psi.TokenType
 import com.intellij.psi.tree.IElementType
 import com.intellij.psi.tree.IFileElementType
 import org.antlr.v4.runtime.CharStreams
 import org.antlr.v4.runtime.Token
 
-class MyLexerAdapter : LexerBase() {
+class AntlrKeyLexerAdapter : LexerBase() {
     private lateinit var lexer: KeYLexer
     private lateinit var buffer: CharSequence
     private var startOffset = 0
@@ -69,8 +69,8 @@ object KeyTokenTypes {
     val BLOCK_COMMENT = create("COMMENT")
     val ID = create("ID")
     val NUMBER = create("NUMBER")
-    val BAD_CHARACTER = com.intellij.psi.TokenType.BAD_CHARACTER
-    val WS = com.intellij.psi.TokenType.WHITE_SPACE
+    val BAD_CHARACTER = TokenType.BAD_CHARACTER
+    val WS = TokenType.WHITE_SPACE
     val KEYWORD = create("KEYWORD")
     val OPERATOR = create("OPERATOR")
     val SEPARATOR = create("SEPARATOR")

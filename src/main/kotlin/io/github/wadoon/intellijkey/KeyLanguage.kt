@@ -1,9 +1,8 @@
-package com.github.wadoon.intellijkey
+package io.github.wadoon.intellijkey
 
 import com.intellij.lang.Language
 import com.intellij.openapi.fileTypes.LanguageFileType
 import org.jetbrains.annotations.NonNls
-import javax.swing.Icon
 
 class KeyLanguage : Language("KeY", "text/x-key") {
     companion object {
@@ -14,9 +13,9 @@ class KeyLanguage : Language("KeY", "text/x-key") {
     override fun getDisplayName() = "KeY Files"
 }
 
-val KEY_FILE_TYPE = KeYFileType()
+val KEY_FILE_TYPE = KeyFileType()
 
-class KeYFileType : LanguageFileType(KeyLanguage.INSTANCE) {
+class KeyFileType : LanguageFileType(KeyLanguage.INSTANCE) {
 
     override fun getName(): @NonNls String = "KeY"
     override fun getDescription() = "KeY Theorem Prover files"

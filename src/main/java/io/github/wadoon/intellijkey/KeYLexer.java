@@ -1,5 +1,5 @@
 // Generated from src/main/antlr4/KeYLexer.g4 by ANTLR 4.13.2
-package com.github.wadoon.key;
+package io.github.wadoon.intellijkey;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.CharStream;

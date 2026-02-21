@@ -1,4 +1,4 @@
-package com.github.wadoon.intellijkey
+package io.github.wadoon.intellijkey
 
 import com.intellij.openapi.util.IconLoader
 

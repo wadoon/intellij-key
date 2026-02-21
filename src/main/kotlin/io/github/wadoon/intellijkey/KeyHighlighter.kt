@@ -1,4 +1,4 @@
-package com.github.wadoon.intellijkey
+package io.github.wadoon.intellijkey
 
 import com.intellij.lexer.Lexer
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors.*
@@ -22,7 +22,7 @@ class KeyHighlighter : SyntaxHighlighterFactory() {
 
     class KeyHighlighterImpl : SyntaxHighlighter {
         override fun getHighlightingLexer(): Lexer {
-            return MyLexerAdapter()
+            return AntlrKeyLexerAdapter()
         }
 
         override fun getTokenHighlights(type: IElementType): Array<out TextAttributesKey> = when (type) {
