@@ -31,6 +31,9 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/version_catalogs.html
 dependencies {
+    implementation("org.antlr:antlr4-runtime:4.13.2")
+
+
     testImplementation(libs.junit)
     testImplementation(libs.opentest4j)
 

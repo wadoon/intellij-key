@@ -1,15 +1,23 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.wadoon.intellijkey</id>
-    <name>intellij-key</name>
+    <name>KeY</name>
     <vendor>wadoon</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <resource-bundle>messages.KeyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.wadoon.intellijkey.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <!--<toolWindow factoryClass="com.github.wadoon.intellijkey.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <postStartupActivity implementation="com.github.wadoon.intellijkey.startup.MyProjectActivity" />
+        -->
+        <lang.parserDefinition language="KeY" implementationClass="com.github.wadoon.intellijkey.KeyParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="KeY"
+                                       implementationClass="com.github.wadoon.intellijkey.KeyHighlighter"/>
+
+        <fileType name="KeY" language="KeY" extensions="key"
+                  implementationClass="com.github.wadoon.intellijkey.KeYFileType"
+                  patterns="*.key;*.proof"/>
     </extensions>
 </idea-plugin>
